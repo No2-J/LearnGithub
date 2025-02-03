@@ -1,11 +1,10 @@
-순서
 git init
 git branch -M main
 git add ~~~
 git commit ~~~ <- 여기까지 기존에 배운거
-git push -u (주소) main : 주소(깃허브에 저장할곳)에 커밋한거 저장
-+ -u : 이 뒤에 붙은 주소를 기억하고 쓰라
-+ 주소가 복잡하니까 -> git remote add origin (주소) : 주소를 origin이라는 변수에 할당
+git push -u (URL) (branch name) : Update commited code in branch to remote repo(URL)
++ -u : remember this URL
++ URL is too long to remember -> git remote add origin (URL) : Assign URL to variable 'origin'
 
 Collaborate with others
 git clone (repo URL) -> Update your local repo with remote one
