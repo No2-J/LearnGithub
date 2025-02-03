@@ -1,3 +1,4 @@
+<Use GitHub>
 git init
 git branch -M main
 git add ~~~
@@ -6,7 +7,7 @@ git push -u (URL) (branch name) : Update commited code in branch to remote repo(
 + -u : remember this URL
 + URL is too long to remember -> git remote add origin (URL) : Assign URL to variable 'origin'
 
-Collaborate with others
+<Collaborate with others(git pull)>
 git clone (repo URL) -> Update your local repo with remote one
 + 이거 하려면 협업하는 사람도 github 아이디가 있어야하고, 코드 주인이 collaborators에 협업할 사람 아이디를 넣어줘야됨
 
@@ -15,3 +16,16 @@ You can't git push if your local repository isn't up to date with remote one
 -> You need to git pull to update your local repo
 
 git pull is git fetch + git merge (git fetch : bring latest commit from remote repo). So it can be possible to confilct
+
+<Collaborate by using branch(pull request)>
+You have to use branc in reomote repo if you don't want to spoil project
+
+How?
+#1. Make branch in Github
+#2. Make branch in local
+Make branch in same way as before, do git push (URL) (branch name)
+
+[pull request]
+If you work as a team, You have to request to your superir or team to merge your branch.
+-> There is function for this call pull request.
+If you do this, your team can see and review your branch before merge.
