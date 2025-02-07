@@ -4,21 +4,20 @@ git branch -M main
 git add ~~~
 git commit ~~~ <- 여기까지 기존에 배운거
 git push -u (URL) (branch name) : Update commited code in branch to remote repo(URL)
-+ -u : remember this URL
++ -u : remember this URL for future pushes
 + URL is too long to remember -> git remote add origin (URL) : Assign URL to variable 'origin'
 
 <Collaborate with others(git pull)>
 git clone (repo URL) -> Update your local repo with remote one
-+ 이거 하려면 협업하는 사람도 github 아이디가 있어야하고, 코드 주인이 collaborators에 협업할 사람 아이디를 넣어줘야됨
-
++ To do this, both you and your collaborator must have GitHub accounts. You also need to add collaborators in the GitHub settings.
 [git pull]
 You can't git push if your local repository isn't up to date with remote one
 -> You need to git pull to update your local repo
 
-git pull is git fetch + git merge (git fetch : bring latest commit from remote repo). So it can be possible to confilct
+git pull is essentially git fetch + git merge (git fetch : bring latest commit from remote repo). So it can be possible to confilct
 
 <Collaborate by using branch(pull request)>
-You have to use branc in reomote repo if you don't want to spoil project
+If you don't want to mess up project, use branches in remote repo.
 
 How?
 #1. Make branch in Github
@@ -26,6 +25,21 @@ How?
 Make branch in same way as before, do git push (URL) (branch name)
 
 [pull request]
-If you work as a team, You have to request to your superir or team to merge your branch.
--> There is function for this call pull request.
-If you do this, your team can see and review your branch before merge.
+If you work as a team, You need to request approval from your supervisor or team members to merge your branch.
+-> There is function for this called a pull request.
+If you do this, your team can see and review your code before merging it.
+
+<stash code(git stash)>
+If you want to temporarily save changes instead of commenting them out, you can stash the code.
+git stash : stash code after commit
+git stash save '' : stash with memo
+git stash list
+git stash pop : load code that latestly stashed
+git stash drop (index) : delete particular stash
+git stash clear : delete all stash
+
+[Why stash instead commenting out?]
+-> If you commit your code, comment outed code probably not looking good. So If you want a clean commit, stash your changes instead.
+
+[Isn't this the same as using a branch?]
+-> right. But stash is useful for quick temporary changes, while branches are better for structured collaboration.
